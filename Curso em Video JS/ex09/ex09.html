@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font: normal 18px Arial;
+        }
+
+        #res{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual o seu nome e seu país</h1>
+    <label for="">Nome:</label>
+    <input type="text" name="nome" id="nome">
+    <label for="">País:</label>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="paises()">
+    <div id="res">
+
+    </div>
+    <script>
+        function paises(){
+            var brasil = 'Brasil'
+            var guardarNome = window.document.querySelector("#nome").value
+            var guardarPais = window.document.querySelector("#pais").value
+            var res = window.document.querySelector("#res")
+            
+            if (guardarPais == brasil){
+                res.innerHTML = `<p>Seu nome é <strong>${guardarNome}</strong> e seu pais de origem é <strong>${guardarPais} e você é brasileiro(a)!!</strong></p>`
+            } 
+            else{
+                res.innerHTML = `<p>Seu nome é <strong>${guardarNome}</strong> e seu pais de origem é <strong>${guardarPais} e você é estrangeiro(a)!!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
